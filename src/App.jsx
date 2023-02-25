@@ -23,12 +23,16 @@ const [prompt, setPrompt] = useState("")
             setResult(res.data.data[0].url)
   }
   return (
-    <div className=" rounded-xl flex flex-col  bg-green-300">
+    <div className=" rounded-xl flex justify-center items-center h-screen flex-col  bg-green-300">
+      <h1 className=' texl-3xl text-green-200 bg-pink-400'>CCVTBUG remember the COLOR combination</h1>
+      <div className=' rounded-xl' >
       <input className=' bg-gradient-to-tr from-slate-400 to-slate-100' onChange={(e) => setPrompt(e.target.value)} />
-      <button onClick={generateImage
+      </div>
+
+      <button className=' bg-pink-400 border rounded-lg text-xl text-white ' onClick={generateImage
       }>gerenate image</button>
-      { result.length > 0 ? <img className=' bottom-2 border-purple-300  bg-slate-600' src={result} alt="" />
- : <></>}
+
+    <img className=' bottom-2 border-purple-300  w-96 bg-slate-600' src={result} alt=""/>
       
            </div>
   )
